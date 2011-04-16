@@ -5,7 +5,7 @@ describe "videos/index.html.erb" do
     assign(:videos, [
       stub_model(Video,
         :title => "Title",
-        :description => "Description",
+        :description => "MyText",
         :category => "Category",
         :subject => "Subject",
         :url => "Url",
@@ -16,7 +16,7 @@ describe "videos/index.html.erb" do
       ),
       stub_model(Video,
         :title => "Title",
-        :description => "Description",
+        :description => "MyText",
         :category => "Category",
         :subject => "Subject",
         :url => "Url",
@@ -33,7 +33,7 @@ describe "videos/index.html.erb" do
     # Run the generator again with the --webrat flag if you want to use webrat matchers
     assert_select "tr>td", :text => "Title".to_s, :count => 2
     # Run the generator again with the --webrat flag if you want to use webrat matchers
-    assert_select "tr>td", :text => "Description".to_s, :count => 2
+    assert_select "tr>td", :text => "MyText".to_s, :count => 2
     # Run the generator again with the --webrat flag if you want to use webrat matchers
     assert_select "tr>td", :text => "Category".to_s, :count => 2
     # Run the generator again with the --webrat flag if you want to use webrat matchers

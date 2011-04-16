@@ -4,7 +4,7 @@ describe "videos/edit.html.erb" do
   before(:each) do
     @video = assign(:video, stub_model(Video,
       :title => "MyString",
-      :description => "MyString",
+      :description => "MyText",
       :category => "MyString",
       :subject => "MyString",
       :url => "MyString",
@@ -21,7 +21,7 @@ describe "videos/edit.html.erb" do
     # Run the generator again with the --webrat flag if you want to use webrat matchers
     assert_select "form", :action => videos_path(@video), :method => "post" do
       assert_select "input#video_title", :name => "video[title]"
-      assert_select "input#video_description", :name => "video[description]"
+      assert_select "textarea#video_description", :name => "video[description]"
       assert_select "input#video_category", :name => "video[category]"
       assert_select "input#video_subject", :name => "video[subject]"
       assert_select "input#video_url", :name => "video[url]"
