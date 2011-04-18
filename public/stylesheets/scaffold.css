@@ -16,10 +16,9 @@ body {
 }
 
 #content, .login, .menu {
-  float: none;
   background-color: #f66;  
   padding: 10px;
-  margin: 20px;
+  margin: 20px auto;
   border: solid 1px;
 }
 
