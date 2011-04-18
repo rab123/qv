@@ -6,6 +6,8 @@ gem 'sqlite3-ruby', :require => 'sqlite3'
 
 gem 'taps'  # heroku needs this to access the db
 
+gem 'will_paginate', '~>3.0.pre2'
+
 group :development, :test do
     gem 'rspec-rails'
     gem 'rspec'

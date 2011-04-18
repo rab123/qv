@@ -43,4 +43,6 @@
   <br />
   
   <%= link_to 'New Video', new_video_path %>
+  <%= will_paginate @videos %>
+  <%= page_entries_info @videos  %>
 </div>

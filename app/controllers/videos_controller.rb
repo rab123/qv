@@ -5,7 +5,8 @@ class VideosController < ApplicationController
   # GET /videos
   # GET /videos.xml
   def index
-    @videos = Video.all(:order => 'category, subject, title ASC')
+    #@videos = Video.all(:order => 'category, subject, title ASC')
+    @videos = Video.paginate :page => params[:page], :order => 'category, subject, title ASC'
 
     respond_to do |format|
       format.html # index.html.erb
