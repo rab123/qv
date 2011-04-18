@@ -1,4 +1,7 @@
 class VideosController < ApplicationController
+  
+  #before_filter :confirm_logged_in
+  
   # GET /videos
   # GET /videos.xml
   def index

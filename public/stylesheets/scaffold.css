@@ -15,13 +15,20 @@ body {
   text-align: center; 
 }
 
-#content {
+#content, .login, .menu {
   float: none;
   background-color: #f66;  
-  width: 90%;
   padding: 10px;
   margin: 20px;
   border: solid 1px;
+}
+
+#content {
+  width: 90%;  
+}
+
+.login, .menu {
+  width: 30%;
 }
 
 table th {

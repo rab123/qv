@@ -29,8 +29,13 @@
       <td><%= video.rating %></td>
       <td><%= video.finder_id %></td> -->
       <td><%= link_to 'Show', video %></td>
+      <% if session[:user_id] %>
       <td><%= link_to 'Edit', edit_video_path(video) %></td>
       <td><%= link_to 'Destroy', video, :confirm => 'Are you sure?', :method => :delete %></td>
+      <% else %>
+      <td><%= link_to 'Edit', '#' %></td>
+      <td><%= link_to 'Destroy', '#' %></td>      
+      <% end %>
     </tr>
   <% end %>
   </table>
